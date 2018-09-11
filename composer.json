@@ -10,7 +10,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/scout": "^5.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "solarium/solarium": "^4.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

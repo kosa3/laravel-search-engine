@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Scout\ElasticSearchEngine;
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,3 +17,7 @@ Route::get('/', function () {
 Route::get('/post/search', function () {
     return App\Models\Post::search(\request('q'))->get();
 });
+
+Route::get('/solr/ping', 'SolariumController@ping');
+
+Route::get('/solr/search', 'SolariumController@search');

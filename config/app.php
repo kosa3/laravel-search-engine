@@ -150,7 +150,8 @@ return [
         /*
          * Package Service Providers...
          */
-	App\Providers\ElasticsearchServiceProvider::class,
+	    App\Providers\ElasticsearchServiceProvider::class,
+        App\Providers\SolariumServiceProvider::class,
 
         /*
          * Application Service Providers...
