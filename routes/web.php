@@ -14,10 +14,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post/search', function () {
-    return App\Models\Post::search(\request('q'))->get();
-});
+Route::get('/elastic/search', 'ElasticsearchController@search');
 
 Route::get('/solr/ping', 'SolariumController@ping');
 
 Route::get('/solr/search', 'SolariumController@search');
+
+Route::get('/solr/exec', 'SolariumController@exec');

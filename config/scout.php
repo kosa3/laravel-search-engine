@@ -94,7 +94,7 @@ return [
      * |--------------------------------------------------------------------------
      * */   
     'elasticsearch' => [
-	 'index' => env('ELASTICSEARCH_INDEX', 'scout'),
+	 'index' => env('ELASTICSEARCH_INDEX', 'kuchikomi'),
 	 'hosts' => [
 	      env('ELASTICSEARCH_HOST', 'http://localhost:9200')
    	 ]
