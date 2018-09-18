@@ -14,17 +14,19 @@ class ElasticsearchController extends Controller
         $params = [
             'index' => 'kuchikomi',
             'type' => 'article',
+            'size' => 2000,
             'body' => [
                 'query' => [
                     'match' => [
-                        'comment' => request('q')
+                        'title' => request('q')
                     ]
                 ]
             ]
         ];
 
         $response = $client->search($params);
-        dd($response);
+
+        return view('elastic.index', ['response' => $response["hits"]["hits"]]);
     }
 
 }
