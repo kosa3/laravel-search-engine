@@ -16,8 +16,10 @@ Route::get('/', function () {
 
 Route::get('/elastic/search', 'ElasticsearchController@search');
 
+Route::get('/solr', function () {
+    return view('solr');
+});
+
 Route::get('/solr/ping', 'SolariumController@ping');
 
 Route::get('/solr/search', 'SolariumController@search');
-
-Route::get('/solr/exec', 'SolariumController@exec');
